@@ -1,0 +1,35 @@
+#include <stdlib.h>
+#include <time.h>
+#include <stdio.h>
+
+/* Start */
+/* Main (void), check if a number is greater or less of equal to 0 */
+/* Initialize "n" value */
+/* Store a random generated number into "n" variable */
+/* Declarations */
+/* 1st condition, if the number is greater than 0, then prints "is positive" */
+/* 2nd condition, if the number is 0, then prints "is zero" */
+/* 3rd condition, if the number is less than 0, then prints "is negative" */
+/* Returns "0" if sucess */
+/* End */
+
+int main(void)
+{
+	int n;
+	/* Main (void), check if a number is greater or less of equal to 0 */
+	srand(time(0));
+	n = rand() - RAND_MAX / 2;
+	if (n > 0)
+	{
+		printf("%d is positive \n", n);
+	}
+	if (n == 0)
+	{
+		printf("%d is zero \n", n);
+	}
+	if (n < 0)
+	{
+		printf("%d is negative \n", n);
+	}
+	return (0);
+}
