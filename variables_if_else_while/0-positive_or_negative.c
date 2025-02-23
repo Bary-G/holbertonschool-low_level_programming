@@ -2,16 +2,13 @@
 #include <time.h>
 #include <stdio.h>
 
-/* Start */
-/* Main (void), check if a number is greater or less of equal to 0 */
-/* Initialize "n" value */
-/* Store a random generated number into "n" variable */
-/* Declarations */
-/* 1st condition, if the number is greater than 0, then prints "is positive" */
-/* 2nd condition, if the number is 0, then prints "is zero" */
-/* 3rd condition, if the number is less than 0, then prints "is negative" */
-/* Returns "0" if sucess */
-/* End */
+/**
+* main(void) (- Generates a random number)
+* @void: unused value
+* return (0); (- Confirm if sucess)
+*
+* Assign a random number to variable n each execution.
+*/
 
 int main(void)
 {
