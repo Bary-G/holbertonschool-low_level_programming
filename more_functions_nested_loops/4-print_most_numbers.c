@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 /**
- * main - my function
+ * print_most_numbers - my function
  *
  * Return: my function
  */
