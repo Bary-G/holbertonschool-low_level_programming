@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * _isupper - my function
+ * mul - my function
  * @a: my value
  * @b: my variable
  *
@@ -9,5 +9,5 @@
  */
 int mul(int a, int b)
 {
-	return (a*b);
+	return (a * b);
 }
