@@ -1,6 +1,6 @@
 #ifndef MAIN_H
 #define MAIN_H
 
-int main(int void);
+int main(void);
 
 #endif
