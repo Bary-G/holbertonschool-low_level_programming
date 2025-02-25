@@ -2,10 +2,10 @@
 #include <stdio.h>
 
 /**
-* _isupper - my function
-*
-* Return: my function
-*/
+ * print_numbers - my function
+ *
+ * Return: my function
+ */
 
 void print_numbers(void)
 {
