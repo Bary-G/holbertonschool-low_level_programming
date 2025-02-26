@@ -3,7 +3,7 @@
 
 /**
  * print_square - my function
- * @n: my value
+ * @size: my value
  *
  * Return: my function
  */
@@ -12,7 +12,7 @@ void print_square(int size)
 {
 	int i;
 	int j;
-	
+
 	for (i = 1; i <= size; i++)
 	{
 		for (j = 1; j < size; j++)
