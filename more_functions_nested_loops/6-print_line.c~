@@ -1,0 +1,15 @@
+#include "main.h"
+#include <stdio.h>
+#include <_putchar.c>
+
+/**
+ * print_line - my function
+ * @n: my value
+ *
+ * Return: my function
+ */
+
+void print_line(int n)
+{
+	_putchar(n);
+}
