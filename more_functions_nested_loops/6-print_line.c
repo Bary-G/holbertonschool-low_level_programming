@@ -1,6 +1,5 @@
 #include "main.h"
 #include <stdio.h>
-#include "_putchar.c"
 
 /**
  * print_line - my function
@@ -11,5 +10,11 @@
 
 void print_line(int n)
 {
-	_putchar(n);
+	int i = 0;
+
+	for (i = 0; i < n; i++)
+	{
+		_putchar('_');
+	}
+	putchar('\n');
 }
