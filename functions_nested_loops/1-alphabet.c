@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 /**
- * main - my function
+ * print_alphabet - my function
  * @void: my value
  *
  * Return: my function
@@ -10,11 +10,12 @@
 
 void print_alphabet(void)
 {
-	char c;
+	char c = 'a';
 
-	for (c = 'a'; c <= 'z'; c++)
+	while (c <= 'z')
 	{
-		putchar(c);
+		_putchar(c);
+		c++;
 	}
-	putchar('\n');
+	_putchar('\n');
 }
