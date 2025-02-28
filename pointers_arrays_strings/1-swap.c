@@ -2,8 +2,9 @@
 #include <stdio.h>
 
 /**
- * print_sign - my function
- * @n: my value
+ * swap_int - my function
+ * @a: my value
+ * @b: my variable
  *
  * Return: my function
  */
