@@ -1,0 +1,17 @@
+#include "main.h"
+#include <stdio.h>
+
+/**
+ * print_sign - my function
+ * @n: my value
+ *
+ * Return: my function
+ */
+
+void swap_int(int *a, int *b)
+{
+	int c = *a;
+	*a = *b;
+	*b = c;
+
+}
