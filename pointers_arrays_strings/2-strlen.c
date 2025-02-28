@@ -4,14 +4,18 @@
 
 /**
  * _strlen - my function
- * @n: my value
+ * @s: my value
  *
  * Return: my function
  */
 
 int _strlen(char *s)
 {
-	int l = strlen(s);
+	int l = 0;
 
+	while (s[l] != '\0')
+	{
+		l++;
+	}
 	return(l);
 }
