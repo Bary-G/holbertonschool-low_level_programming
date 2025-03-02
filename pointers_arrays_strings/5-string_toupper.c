@@ -1,6 +1,5 @@
 #include "main.h"
 #include <stdio.h>
-#include <ctype.h>
 
 /**
  * string_toupper - my function
@@ -15,9 +14,9 @@ char *string_toupper(char *str)
 
 	while (*str)
 	{
-		if (islower(*str))
+		if (*str >= 'a' && *str <= 'z')
 		{
-			*str = toupper(*str);
+			*str -= 32;
 		}
 		str++;
 	}
