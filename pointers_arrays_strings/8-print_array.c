@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 /**
- * printArray - my function
+ * print_array - my function
  * @a: my pointer
  * @n: my value
  *
@@ -12,6 +12,7 @@
 void print_array(int *a, int n)
 {
 	int i;
+
 	for (i = 0; i < n; i++)
 	{
 		printf("%d", a[i]);
