@@ -1,0 +1,34 @@
+#include "main.h"
+#include <stdio.h>
+
+/**
+ * _strspn - my function
+ * @s: my string
+ * @accept: uhhh
+ *
+ * Return: my function
+ */
+
+unsigned int _strspn(char *s, char *accept)
+{
+	size_t count = 0;
+	char *p;
+	char *q;
+
+	for (p = s; *p; p++)
+	{
+		for (q = accept; *q; q++)
+		{
+			if (*p == *q)
+			{
+				break;
+			}
+		}
+		if (! *q)
+		{
+			break;
+		}
+		count++;
+	}
+	return (count);
+}
