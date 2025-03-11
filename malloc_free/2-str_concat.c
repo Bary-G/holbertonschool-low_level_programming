@@ -44,7 +44,10 @@ char *str_concat(char *s1, char *s2)
 	{
 		result[i] = s1[i];
 	}
-
+	if (s1 == NULL)
+	{
+		s1 = " ";
+	}
 	for (j = 0; j < length2; j++)
 	{
 		result[length1 + j] = s2[j];
