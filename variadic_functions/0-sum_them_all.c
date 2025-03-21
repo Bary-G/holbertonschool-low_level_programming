@@ -4,12 +4,13 @@
 
 /**
  * sum_them_all - summon variadic function values
+ * @n: number of arguments
  *
  * Return: total of variadic function values
  */
 int sum_them_all(const unsigned int n, ...)
 {
-    va_list ap;
+	va_list ap;
 	unsigned int i;
 	int total;
 
