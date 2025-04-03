@@ -3,10 +3,9 @@
 #include <stdio.h>
 #include "lists.h"
 
-list_t *add_node(list_t **head, const char *str)
+list_t *add_node_end(list_t **head, const char *str)
 {
 	list_t *newNode = malloc(sizeof(list_t));
-	result_t result = {NULL, *head};
 
 	if (newNode == NULL)
 	{
@@ -16,10 +15,22 @@ list_t *add_node(list_t **head, const char *str)
 	if (newNode->str == NULL)
 	{
 		free(newNode);
-		return (result);
+		return (NULL);
 	}
-	newNode->next = *head;
-	*head = newNode;
+	newNode->next = NULL;
+
+	if (*head == NULL)
+	{
+		*head = newNode;
+	}
+	else
+	{
+		list_t *lastNode = *head;
+		while (lastNode->next != NULL) {
+			lastNode = lastNode->next;
+		}
+		lastNode->next = newNode;
+	}
 
 	return (newNode);
 }
