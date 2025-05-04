@@ -4,11 +4,10 @@
 /**
  * add - my function
  * @a: my value
- * @a: my var
+ * @b: my var
  *
  * Return: my function
  */
-
 int add(int a, int b)
 {
 	return (a + b);
