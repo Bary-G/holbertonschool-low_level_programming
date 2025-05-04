@@ -1,18 +1,19 @@
 #include <stdio.h>
 
 /**
-* main(void) (- Generates hexa)
-* return (0); (- Confirm if sucess)
-*
-* Write hexadecimal Numbers
-*/
+ * main - Generates hexa
+ *
+ * Return:void
+ */
+int main(void)
+{
+	char base16[] = "0123456789abcdef";
+	int i;
 
-int main(void) {
-    char base16[] = "0123456789abcdef";
-    int i;
-    for (i = 0; i < 16; i++) {
-        putchar(base16[i]);
-    }
-    putchar('\n');
-    return 0;
+	for (i = 0; i < 16; i++)
+	{
+		putchar(base16[i]);
+	}
+	putchar('\n');
+	return (0);
 }
