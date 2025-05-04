@@ -8,7 +8,7 @@
  *
  * Return: abs num
  */
-int _abs(int)
+int _abs(int n)
 {
-	return (num < 0) ? -num : num;
+	return (n < 0) ? -n : n;
 }
