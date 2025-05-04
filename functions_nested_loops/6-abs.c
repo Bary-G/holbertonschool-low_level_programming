@@ -1,11 +1,14 @@
 #include <stdio.h>
+#include "main.h"
 
-int _abs(int n)
+/**
+ * my_abs - abs
+ *
+ * @num: Integer
+ *
+ * Return: abs num
+ */
+int _abs(int)
 {
-	if (n < 0)
-	{
-		_putchar('-');
-		n = -n;
-	}
-	return n;
+	return (num < 0) ? -num : num;
 }
