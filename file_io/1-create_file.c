@@ -1,55 +1,41 @@
-#include <unistd.h>
+#include "main.h"
 #include <fcntl.h>
+#include <unistd.h>
+#include <sys/stat.h>
 
+/**
+ * create_file - create a file
+ * @filename: name of the file
+ * @text_content: string to write to the file
+ *
+ * Return: 1 on success, -1 on failure.
+ */
 int create_file(const char *filename, char *text_content)
 {
-	int fd;
-	ssize_t bytes_written;
+    int fd;
+    ssize_t bytes_written;
+    size_t len = 0;
 
-	asm volatile (
-		"mov $2, %%eax\n\t"
-		"mov %1, %%rdi\n\t"
-		"mov $01101, %%esi\n\t"
-		"mov $0600, %%edx\n\t"
-		"syscall"
-		: "=a" (fd)
-		: "r" (filename)
-		: "rdi", "rsi", "rdx"
-	);
+    if (!filename)
+        return (-1);
 
-	if (fd < 0)
-	{
-		return (-1);
-	}
-	if (text_content)
-	{
-		size_t len = 0;
-		while (text_content[len]) len++;
-		{
-			asm volatile (
-				"mov $1, %%eax\n\t"
-				"mov %1, %%edi\n\t"
-				"mov %2, %%rsi\n\t"
-				"mov %3, %%rdx\n\t"
-				"syscall"
-				: "=a" (bytes_written)
-				: "r" (fd), "r" (text_content), "r" (len)
-				: "rdi", "rsi", "rdx"
-			);
-		}
-		if (bytes_written < 0)
-		{
-			return (-1);
-		}
-	}
-	asm volatile (
-		"mov $3, %%eax\n\t"
-		"mov %0, %%edi\n\t"
-		"syscall"
-		:
-		: "r" (fd)
-		: "edi"
-	);
+    fd = open(filename, O_CREAT | O_WRONLY | O_TRUNC, S_IRUSR | S_IWUSR);
+    if (fd == -1)
+        return (-1);
 
-	return (0);
+    if (text_content)
+    {
+        while (text_content[len])
+            len++;
+
+        bytes_written = write(fd, text_content, len);
+        if (bytes_written == -1)
+        {
+            close(fd);
+            return (-1);
+        }
+    }
+
+    close(fd);
+    return (1);
 }
