@@ -2,13 +2,13 @@
 #include "main.h"
 
 /**
- * my_abs - abs
+ * _abs - abs
  *
- * @num: Integer
+ * @n: Integer
  *
  * Return: abs num
  */
 int _abs(int n)
 {
-	return (n < 0) ? -n : n;
+	return ((n < 0) ? -n : n);
 }
