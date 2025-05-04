@@ -3,7 +3,7 @@
 
 /**
  * times_table - my function
- * @n: my value
+ * @void: void
  *
  * Return: my function
  */
