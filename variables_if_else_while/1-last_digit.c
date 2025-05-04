@@ -3,11 +3,12 @@
 #include <time.h>
 
 /**
-* main(void) (- Generates numbers)
-* return (0); (- Confirm if sucess)
-*
-* Check the last digit
-*/
+ * main - Print the last digit
+ *
+ * @void: nothing
+ *
+ * Return: 0
+ */
 int main(void)
 {
 	int n;
