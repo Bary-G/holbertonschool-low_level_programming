@@ -4,7 +4,7 @@
 #include <stdio.h>
 
 /**
- * dog - structure
+ * struct dog - structure
  * @name: the name
  * @age: the age
  * @owner: the owner
