@@ -4,31 +4,29 @@
 #include "dog.h"
 
 /**
- * _strlen - my function
- * @s: my value
+ * _strlen - mesure string length
+ * @s: given string
  *
- * Return: my function
+ * Return: string length
  */
+int _strlen(char *s)
+{
+	int l = 0;
 
- int _strlen(char *s)
- {
-	 int l = 0;
-
-	 while (s[l] != '\0')
-	 {
-		 l++;
-	 }
-	 return (l);
- }
+	while (s[l] != '\0')
+	{
+		l++;
+	}
+	return (l);
+}
 
  /**
- * _strcpy - my function
- * @dest: my pointer
- * @src: my value
+ * _strcpy - copy a string
+ * @dest: string destination
+ * @src: given string
  *
- * Return: my function
+ * Return: a string copy
  */
-
 char *_strcpy(char *dest, char *src)
 {
 	char *ptr = dest;
