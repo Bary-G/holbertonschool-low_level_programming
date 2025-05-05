@@ -1,14 +1,23 @@
 #include "main.h"
 #include <stdio.h>
 
+/**
+ * cap_string - my function
+ * @str: my value
+ *
+ * Return: my function
+ */
 char *cap_string(char *str)
 {
 	char separators[] = " \t\n,;.!?\"(){}";
 	int i = 0, capitalize = 1;
+	int j;
 
-	while (str[i] != '\0') {
+	while (str[i] != '\0')
+	{
 		int is_separator = 0;
-		for (int j = 0; separators[j] != '\0'; j++)
+
+		for (j = 0; separators[j] != '\0'; j++)
 		{
 			if (str[i] == separators[j])
 			{
@@ -24,7 +33,9 @@ char *cap_string(char *str)
 		{
 			str[i] -= ('a' - 'A');
 			capitalize = 0;
-		} else {
+		}
+		else
+		{
 			capitalize = 0;
 		}
 
