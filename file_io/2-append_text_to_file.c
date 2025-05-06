@@ -11,7 +11,6 @@
  *
  * Return: my function
  */
-
 int _strlen(char *s)
 {
 	int l = 0;
