@@ -1,6 +1,13 @@
 #include <stdio.h>
 #include <ctype.h>
+#include "main.h"
 
+/**
+ * _atoi - my function
+ * @s: my pointer
+ *
+ * Return: my function
+ */
 int _atoi(char *s)
 {
 	int num = 0;
@@ -9,7 +16,7 @@ int _atoi(char *s)
 
 	if (s == NULL)
 	{
-		return 0;
+		return (0);
 	}
 	while (isspace(*s))
 	{

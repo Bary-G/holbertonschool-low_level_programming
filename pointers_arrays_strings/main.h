@@ -12,5 +12,6 @@ void print_chessboard(char (*a)[8]);
 void print_diagsums(int *a, int size);
 char *_strncpy(char *dest, char *src, int n);
 char *cap_string(char *str);
+int _atoi(char *s);
 
 #endif
