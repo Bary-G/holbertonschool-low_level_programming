@@ -8,25 +8,23 @@
  *
  * Return: my function
  */
-
 char *_strcat(char *dest, char *src)
 {
-	char *d = dest;
+	char *ptr = dest;
 
-	while (*d != '\0')
+	while (*ptr)
 	{
-		d++;
+		ptr++;
 	}
 
-	while (*src != '\0')
+	while (*src)
 	{
-		*d = *src;
-		putchar(*d);
-		d++;
+		*ptr = *src;
+		ptr++;
 		src++;
 	}
 
-	*d = '\0';
+	*ptr = '\0';
 
 	return (dest);
 }
