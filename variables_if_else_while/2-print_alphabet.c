@@ -1,15 +1,12 @@
 #include <stdio.h>
 
 /**
-* main(void) (- Generates alphabet)
-* return (0); (- Confirm if sucess)
-*
-* Write a program that prints the alphabet
-*/
-
+ * main - print alphabet
+ * @void: void
+ * Return: 0
+ */
 int main(void)
 {
-
 	char c;
 
 	for (c = 'a'; c <= 'z'; c++)

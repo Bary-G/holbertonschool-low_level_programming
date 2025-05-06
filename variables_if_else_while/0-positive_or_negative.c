@@ -3,13 +3,10 @@
 #include <stdio.h>
 
 /**
-* main(void) (- Generates a random number)
-* @void: unused value
-* return (0); (- Confirm if sucess)
-*
-* Assign a random number to variable n each execution.
-*/
-
+ * main - verify if negative or not
+ * @void: void
+ * Return: 0
+ */
 int main(void)
 {
 	int n;
