@@ -7,7 +7,6 @@
  *
  * Return: my function
  */
-
 void more_numbers(void)
 {
 	char c = 0;
