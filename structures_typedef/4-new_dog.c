@@ -20,7 +20,7 @@ int _strlen(char *s)
 	return (l);
 }
 
- /**
+/**
  * _strcpy - copy a string
  * @dest: string destination
  * @src: given string
