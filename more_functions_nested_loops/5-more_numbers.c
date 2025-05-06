@@ -2,8 +2,7 @@
 #include <stdio.h>
 
 /**
- * _isupper - my function
- * @c: my value
+ * more_numbers - my function
  *
  * Return: my function
  */
