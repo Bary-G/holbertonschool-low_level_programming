@@ -40,7 +40,6 @@ int main(int argc, char *argv[])
 		print_error_and_exit("Error: Can't read from file", argv[1], 98);
 	}
 
-
 	if (argc != 3)
 	{
 		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
