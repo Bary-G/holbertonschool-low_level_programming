@@ -1,7 +1,5 @@
 #include "main.h"
-#include <stdio.h>
 #include <stdlib.h>
-#include <stddef.h>
 
 /**
  * _strlen_recursion - my function
@@ -25,34 +23,33 @@ int _strlen_recursion(char *s)
  * string_nconcat - concatenates two strings
  * @s1: first string
  * @s2: second string
- * @n: The maximum number of bytes to include from s2
+ * @n: s2 max number of bytes
  *
  * Return: Pointer to concatenated string, NULL otherwise
  */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	unsigned int len2;
-	unsigned int i;
-	unsigned int j;
+	unsigned int len1, len2, i, j;
 	char *concat;
 
-	if (s1 == NULL || s2 == NULL)
-	{
-		return (NULL);
-	}
+	if (s1 == NULL)
+		s1 = "";
+	if (s2 == NULL)
+		s2 = "";
 
+	len1 = _strlen_recursion(s1);
 	len2 = _strlen_recursion(s2);
 
 	if (n > len2)
 	{
 		n = len2;
 	}
-	concat = (char *)malloc(_strlen_recursion(s1) + n + 1);
+	concat = (char *)malloc(len1 + n + 1);
 	if (concat == NULL)
 	{
 		return (NULL);
 	}
-	for (i = 0; i < (unsigned int)_strlen_recursion(s1); i++)
+	for (i = 0; i < len1; i++)
 	{
 		concat[i] = s1[i];
 	}
