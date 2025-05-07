@@ -28,7 +28,7 @@ int _strlen_recursion(char *s)
  * @n: The maximum number of bytes to include from s2
  *
  * Return: Pointer to the newly allocated concatenated string,
- *         or NULL if memory allocation fails.
+ *		 or NULL if memory allocation fails.
  */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
@@ -37,13 +37,9 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	unsigned int j;
 	char *concat;
 
-	if (s1 == NULL)
+	if (s1 == NULL || s2 == NULL)
 	{
-		s1 = "";
-	}
-        if (s2 == NULL)
-	{
-		s2 = "";
+		return (NULL);
 	}
 
 	len2 = _strlen_recursion(s2);
@@ -52,12 +48,12 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	{
 		n = len2;
 	}
-	concat = (char *)malloc(sizeof(s1) + n + 1);
+	concat = (char *)malloc(sizeof(_strlen_recursion(s1)) + n + 1);
 	if (concat == NULL)
 	{
 		return (NULL);
 	}
-	for (i = 0; i < sizeof(s1); i++)
+	for (i = 0; i < (unsigned int)_strlen_recursion(s1); i++)
 	{
 		concat[i] = s1[i];
 	}
